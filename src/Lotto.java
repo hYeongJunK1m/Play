@@ -1,26 +1,47 @@
-import java.util.Random;
 
+
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Lotto {
     public static void main(String[] args) {
+        /*
+         * 로또번호 추출. 중복 없는 난수 6개를 추출한다. 1~45 사이의 난수여야 한다.
+         */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("몇 개의 세트를 추출하시겠습니까?\n>> ");
+        int set = sc.nextInt();
+        char cnt = 'A';
 
-        Random r = new Random();
+        while (set > 0) {
 
-        int lotto[] = new int[6];
-        int check[] = new int[45];
-        System.out.println("==================");
+            int[] nums = new int[6];
+            for (int i = 0; i < nums.length; i++) {
+                int temp = (int) (Math.random() * 45) + 1;
+                nums[i] = temp;
 
-        for (int k = 'A'; k <='E'; k++) {
-            System.out.println((char) k + " 자 동 ");
-        for (int i = 0; i < lotto.length; i++) {
-            lotto[i] = r.nextInt(45)+1;
+                // 중복제거
 
-            if(check[lotto[i]]==0){
-                check[lotto[i]]=i;
+                for (int j = 0; j < i; j++) {
+                    if (nums[j] == temp) {
+                        i--;
+                        break;
+                    }
+                }
+
+            } // for end
+
+            System.out.print("\n"+ cnt + " 자 동 " );
+            for (int i = 0; i < nums.length; i++) {
+                System.out.print(nums[i] + " ");
+                Arrays.sort(nums);
             }
-            else
-                i--;
-        }
+            set--;
+            cnt++;
+        Arrays.sort(nums);
+        } // while end
+
+        sc.close();
     }
-    }
+
 }
