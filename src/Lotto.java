@@ -1,21 +1,26 @@
-import java.util.Arrays;
 import java.util.Random;
+
 
 public class Lotto {
     public static void main(String[] args) {
 
-        int Lotto[] = new int[6];
+        Random r = new Random();
 
+        int lotto[] = new int[6];
+        int check[] = new int[45];
         System.out.println("==================");
 
-        for (int i = 0; i < Lotto.length; i++) {
-            Lotto[i] = (int) (Math.random() * 45) + 1;
+        for (int k = 'A'; k <='E'; k++) {
+            System.out.println((char) k + " 자 동 ");
+        for (int i = 0; i < lotto.length; i++) {
+            lotto[i] = r.nextInt(45)+1;
 
+            if(check[lotto[i]]==0){
+                check[lotto[i]]=i;
+            }
+            else
+                i--;
         }
-        for (int i = 0; i < Lotto.length; i++) {
-            System.out.println(Lotto[i]);
-        }
-        Arrays.sort(Lotto);
-        System.out.println(" 입니다.");
+    }
     }
 }
