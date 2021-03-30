@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 public class Lotto {
     public static void main(String[] args) {
-        /*
-         * 로또번호 추출. 중복 없는 난수 6개를 추출한다. 1~45 사이의 난수여야 한다.
-         */
+
+
         Scanner sc = new Scanner(System.in);
         System.out.print("몇 개의 세트를 추출하시겠습니까?\n>> ");
         int set = sc.nextInt();
@@ -33,12 +32,13 @@ public class Lotto {
 
             System.out.print("\n"+ cnt + " 자 동 " );
             for (int i = 0; i < nums.length; i++) {
-                System.out.print(nums[i] + " ");
                 Arrays.sort(nums);
+                System.out.print(nums[i] + " ");
+
             }
             set--;
             cnt++;
-        Arrays.sort(nums);
+
         } // while end
 
         sc.close();
