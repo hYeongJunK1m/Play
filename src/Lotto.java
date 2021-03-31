@@ -11,7 +11,7 @@ public class Lotto {
         System.out.print("몇 개의 세트를 추출하시겠습니까?\n>> ");
         int set = sc.nextInt();
         char cnt = 'A';
-
+        System.out.print("===========================");
         while (set > 0) {
 
             int[] nums = new int[6];
@@ -36,12 +36,14 @@ public class Lotto {
                 System.out.print(nums[i] + " ");
 
             }
+
             set--;
             cnt++;
 
         } // while end
 
         sc.close();
+        System.out.print("\n===========================");
     }
 
 }
