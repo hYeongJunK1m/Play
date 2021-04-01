@@ -21,8 +21,11 @@ public class UpDown {
             System.out.println("남은 횟수 " + chance + "회");
 
             if(chance ==0){
-                System.out.println("     GAME OVER");
-                System.out.println("기회를 모두 사용하였습니다.");
+                System.out.println("=======================");
+                System.out.println("      GAME OVER");
+                System.out.println("      GAME OVER");
+                System.out.println("      GAME OVER");
+                System.out.println("=======================");
                 break;
 
             }
