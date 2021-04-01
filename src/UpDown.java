@@ -20,17 +20,19 @@ public class UpDown {
 
             System.out.println("남은 횟수 " + chance + "회");
 
+            if(chance ==0){
+                System.out.println("     GAME OVER");
+                System.out.println("기회를 모두 사용하였습니다.");
+                break;
+
+            }
             if(q<rNum){
                 System.out.println(q + "보다 UP");
             }
             else if(q>rNum){
                 System.out.println(q + "보다 DOWN");
             }
-            else if(chance == 0){
-                System.out.println("     GAME OVER");
-                System.out.println("기회를 모두 사용하였습니다.");
-                break;
-            }
+
             else {
                 System.out.println("         WIN");
                 System.out.println("정답입니다.");
