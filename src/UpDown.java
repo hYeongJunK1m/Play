@@ -43,5 +43,5 @@ public class UpDown {
             }
         }
         scanner.close();
-    }
+    } //요즘 과제가 너무 많아... 곧 중간고사야... 그래도 잔디 밭은 채우고 싶어..
 }
