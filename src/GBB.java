@@ -9,11 +9,13 @@ public class GBB {
         int user = 0;
         int com = 0;
 
-        int rd = (int) (Math.random() * 3) + 1;
+
         Scanner sc = new Scanner(System.in);
         while (true) {
 
             user = sc.nextInt();
+
+            int rd = (int) (Math.random() * 3) + 1;
 
             if (rd == 1 && user == 1) {
                 System.out.println("무승부");
