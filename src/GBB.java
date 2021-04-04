@@ -55,4 +55,4 @@ public class GBB {
         }
                 sc.close();
     }
-}
+}//과제 진짜 오지게 많네 아
