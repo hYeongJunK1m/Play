@@ -35,7 +35,7 @@ public class Zero {
             else{
                 System.out.println("다시");
             }
-
+            //휴...과제 뒤지게 많네 진짜 졸업 과제는 할 수 있으려나
         }
     }
 }
